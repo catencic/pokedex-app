@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useFetchPokemon } from '../hooks/useFetchPokemon';
 import { PokemonCardItem } from './PokemonCardItem';
-import { SearchPokemon } from './SearchPokemon'
+
 
 export const PokemonCard = () => {
 
@@ -12,6 +12,7 @@ export const PokemonCard = () => {
     return (
         <>
         {
+         
             data &&
             (
             <PokemonCardItem data={data} setPokemon={setPokemon}/>

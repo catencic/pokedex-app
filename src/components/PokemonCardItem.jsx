@@ -1,17 +1,38 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { uiContex } from '../context/iuContext';
 import { SearchPokemon } from './SearchPokemon'
+import swal from 'sweetalert';
 
 
 
 export const PokemonCardItem = ({data ,setPokemon}) => {
 
+    const {reducerState} = useContext(uiContex);
+
+    const {loading, msgError} = reducerState;
+      
 
     const {name, front_default , types , stats, base_experience} = data;
-
+      //TODO: corregir el error en la exepción,ajustar el state del pokemon
     return (
         <main className="flex">
       
         <article className="card">
+            
+            {
+                msgError && swal({
+                    title: "Error",
+                    text: msgError,
+                    icon: "error",
+                    button: "Aceptar"
+                }).then(resp =>{
+                    if(resp){
+                        console.log('si');
+                        location.reload();
+                    }
+                })
+            }
+            
             <SearchPokemon setPokemon={setPokemon}/>
             <img src="../src/images/bg-pattern-card.svg" alt="imagen header card" className="card-header"/>
             <div className="card-body">

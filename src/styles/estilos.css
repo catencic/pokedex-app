@@ -42,8 +42,10 @@
     width: 326px;
     border-radius: 16px;
     overflow: hidden;
+   
     -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
             box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+
   }
   
   .card-header {
@@ -166,6 +168,23 @@
   
   
   
-  /*  footer   */
+  /*  logo   */
+
+  .banner {
+
+    width: 150px;
+    height: 100px;
+    display: block;
+    margin: auto;
+    
+    
+  /*display block uses full width of element aka div, margin auto places this element in the center of the div*/
+  }
+
+  div .banner:hover {
+    width: 155px;
+    height: 105px;
+    transform: scale(1.3);
+  }
   
   

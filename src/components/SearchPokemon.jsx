@@ -5,14 +5,19 @@ export const SearchPokemon = ({setPokemon}) => {
 
     const [inputValue, setInputValue] = useState('');
 
+    
+
         const handleInputChange = (e) => {
            setInputValue(e.target.value);
         }
 
         const handleSubmit = (e) => {
             e.preventDefault();
-            setPokemon([inputValue]);
-            setInputValue('');
+            if(inputValue.length > 0){
+
+                setPokemon([inputValue]);
+                setInputValue('');
+            }
         }
 
         
