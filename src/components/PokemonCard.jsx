@@ -5,7 +5,7 @@ import { PokemonCardItem } from './PokemonCardItem';
 
 export const PokemonCard = () => {
 
-    const [pokemon, setPokemon] = useState('mewtwo');
+    const [pokemon, setPokemon] = useState('misdreavus');
     const {data , loading} = useFetchPokemon(pokemon);
     //const {name, sprites ,types , stats,base_experience} = data;
 
