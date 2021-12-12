@@ -6,7 +6,7 @@ import { getPokemons } from '../helpers/getPokemon';
 export const useFetchPokemon = (pokemon) => {
 
    const [state, setState] = useState({
-       data: [],
+       data: null,
        loading: true,
    });
 
